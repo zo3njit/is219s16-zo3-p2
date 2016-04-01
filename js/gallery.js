@@ -98,7 +98,7 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 
 $(document).ready( function() {
 	
-	$('img.moreIndicator').click( function() {
+	$('.moreIndicator').click( function() {
 		$('.details').toggle();
 		alert("working");
 	});
