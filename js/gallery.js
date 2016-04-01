@@ -42,6 +42,28 @@ function swapPhoto() {
 // Counter for the mImages array
 var mCurrentIndex = 0;
 
+// Holds the retrived JSON information
+var mJson;
+
+// URL for the JSON to load by default
+// Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
+var mUrl = "images.json";
+
+// Array holding GalleryImage objects (see below).
+var mImages = [{"imgPath": "img/places/australia.jpg"},
+			   {"imgPath": "img/places/austria.jpg"},
+			   {"imgPath": "img/places/france.jpg"},
+			   {"imgPath": "img/places/greece.jpg"},
+			   {"imgPath": "img/places/hungary.jpg"},
+			   {"imgPath": "img/places/india.jpg"},
+			   {"imgPath": "img/places/italy.jpg"},
+			   {"imgPath": "img/places/japan.jpg"},
+			   {"imgPath": "img/places/korea.jpg"},
+			   {"imgPath": "img/places/norway.jpg"},
+			   {"imgPath": "img/places/switzerland.jpg"},
+			   {"imgPath": "img/places/thailand.jpg"},
+			   {"imgPath": "img/places/turkey.jpg"}];
+
 // XMLHttpRequest variable
 var mRequest = new XMLHttpRequest();
 mRequest.onreadystatechange = function() { 
@@ -52,6 +74,7 @@ mRequest.onreadystatechange = function() {
 			mJson = JSON.parse(mRequest.responseText);
 			// Let’s print out the JSON; It will likely show as “obj” 
 			console.log(mJson); 
+			myFunction(mImages);
 		} catch(err) { 
 			console.log(err.message) 
 		} 
@@ -61,16 +84,15 @@ mRequest.onreadystatechange = function() {
 mRequest.open("GET",mURL, true); 
 mRequest.send();
 
-// Array holding GalleryImage objects (see below).
-var mImages = ["img/places/australia.jpg","img/places/austria.jpg","img/places/france.jpg","img/places/greece.jpg","img/places/hungary.jpg","img/places/india.jpg","img/places/italy.jpg","img/places/japan.jpg","img/places/korea.jpg","img/places/norway.jpg","img/places/switzerland.jpg","img/places/thailand.jpg","img/places/turkey.jpg",];
-
-// Holds the retrived JSON information
-var mJson;
-
-// URL for the JSON to load by default
-// Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = "images.json";
-
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' + 
+        arr[i].imgPath + '</a><br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
