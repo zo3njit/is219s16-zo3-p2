@@ -95,14 +95,14 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 		mImages.push(galleryImage);
 	}
 }
-/*
+
 $(document).ready( function() {
 	
 	// This initially hides the photos' metadata information
-	$('.details').eq(0).hide();
+	$('.details').eq(0).show();
 	
 });
-*/
+
 window.addEventListener('load', function() {
 	
 	console.log('window loaded');
