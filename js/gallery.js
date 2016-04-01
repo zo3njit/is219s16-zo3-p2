@@ -91,7 +91,7 @@ function myFunction(arr) {
         out += '<a href="' + arr[i].mUrl + '">' + 
         arr[i].imgPath + '</a><br>';
     }
-    document.getElementById("id01").innerHTML = out;
+    document.getElementById("slideShow").innerHTML = out;
 }
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
