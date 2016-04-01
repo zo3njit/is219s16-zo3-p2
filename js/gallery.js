@@ -99,7 +99,10 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 //main function
 var main = function() {
 	$('.details').click(function() {
-		$('.details').hide();
+		$('.details').removeClass('location');
+		$('.details').removeClass('description');
+		$('.details').removeClass('date');
+		
 	});
 }
 
