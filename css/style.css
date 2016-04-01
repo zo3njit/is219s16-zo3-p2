@@ -48,6 +48,7 @@ body {
 #nav {
 	position: relative;
 	clear: both;
+	
 }
 
 #prevPhoto {
@@ -55,10 +56,18 @@ body {
 	width: 42px;
 }
 
+#prevPhoto:hover {
+	opacity: .8;
+}
+
 #nextPhoto {
 	float: right;
 	height: 42px;
 	width: 42px;
+}
+
+#nextPhoto:hover {
+	opacity: .8;
 }
 
 .details p {
