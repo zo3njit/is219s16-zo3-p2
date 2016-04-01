@@ -95,21 +95,14 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 		mImages.push(galleryImage);
 	}
 }
-
-//main function
-var main = function() {
-	$('.moreIndicator').click(function() {
-		$('.details').toggle();
-	});
-}
-
+/*
 $(document).ready( function() {
 	
 	// This initially hides the photos' metadata information
 	$('.details').eq(0).hide();
 	
 });
-
+*/
 window.addEventListener('load', function() {
 	
 	console.log('window loaded');
@@ -127,3 +120,12 @@ function GalleryImage(location, description, date, img) {
 	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
 	this.img = "";
 }
+
+//main function
+var main = function() {
+	$('.moreIndicator').click(function() {
+		$('.details').toggle();
+	});
+}
+
+$(document).ready(main);
