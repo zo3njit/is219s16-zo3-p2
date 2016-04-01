@@ -50,19 +50,7 @@ var mJson;
 var mUrl = "images.json";
 
 // Array holding GalleryImage objects (see below).
-var mImages = [{"imgPath": "img/places/australia.jpg"},
-			   {"imgPath": "img/places/austria.jpg"},
-			   {"imgPath": "img/places/france.jpg"},
-			   {"imgPath": "img/places/greece.jpg"},
-			   {"imgPath": "img/places/hungary.jpg"},
-			   {"imgPath": "img/places/india.jpg"},
-			   {"imgPath": "img/places/italy.jpg"},
-			   {"imgPath": "img/places/japan.jpg"},
-			   {"imgPath": "img/places/korea.jpg"},
-			   {"imgPath": "img/places/norway.jpg"},
-			   {"imgPath": "img/places/switzerland.jpg"},
-			   {"imgPath": "img/places/thailand.jpg"},
-			   {"imgPath": "img/places/turkey.jpg"}];
+var mImages = [];
 
 // XMLHttpRequest variable
 var mRequest = new XMLHttpRequest();
@@ -73,7 +61,7 @@ mRequest.onreadystatechange = function() {
 			// Let’s try and see if we can parse JSON 
 			mJson = JSON.parse(mRequest.responseText);
 			// Let’s print out the JSON; It will likely show as “obj” 
-			console.log(mJson); 
+			//console.log(mJson); 
 			myFunction(mJson);
 		} catch(err) { 
 			console.log(err.message) 
@@ -84,14 +72,19 @@ mRequest.onreadystatechange = function() {
 mRequest.open("GET",mURL, true); 
 mRequest.send();
 
+//Iterate through JSON object and create GalleryImage objects
 function myFunction(arr) {
-    var out = "";
+    //var out = "";
     var i;
     for(i = 0; i < arr.length; i++) {
-        out += '<a href="' + arr[i].mUrl + '">' + 
-        arr[i].imgPath + '</a><br>';
+        //out += '<a href="' + arr[i].mUrl + '">' + 
+        //arr[i].imgPath + '</a><br>';
+		mImages.push(galleryImage.location = arr.images[i].imgLocation,
+					 galleryImage.img = arr.images[i].imgPath,
+					 galleryImage.description = arr.images[i].description,
+					 galleryImage.date = arr.images[i].date);
     }
-    document.getElementById("slideShow").innerHTML = out;
+    //document.getElementById("slideShow").innerHTML = out;
 }
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
@@ -119,11 +112,11 @@ window.addEventListener('load', function() {
 function GalleryImage(location, description, date, img) {
 	//implement me as an object to hold the following data about an image:
 	//1. location where photo was taken
-	this.location = ;
+	this.location = "";
 	//2. description of photo
-	this.description = ;
+	this.description = "";
 	//3. the date when the photo was taken
-	this.date = ;
+	this.date = "";
 	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
-	this.img = ;
+	this.img = "";
 }
