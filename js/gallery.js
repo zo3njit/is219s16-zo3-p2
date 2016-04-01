@@ -31,7 +31,6 @@ function animate() {
 }
 
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
-
 function swapPhoto() {
 	//Add code here to access the #slideShow element.
 	//Access the img element and replace its source
@@ -79,10 +78,14 @@ window.addEventListener('load', function() {
 
 }, false);
 
-function GalleryImage() {
+function GalleryImage(location, description, date, img) {
 	//implement me as an object to hold the following data about an image:
 	//1. location where photo was taken
+	this.location = ;
 	//2. description of photo
+	this.description = ;
 	//3. the date when the photo was taken
+	this.date = ;
 	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
+	this.img = ;
 }
