@@ -65,7 +65,7 @@ mRequest.onreadystatechange = function() {
 };
 
 mRequest.send();
-/*
+
 //Iterate through JSON object and create GalleryImage objects
 function myFunction(arr) {
     //var out = "";
@@ -100,10 +100,21 @@ function swapPhoto() {
 
 $(document).ready( function() {
 	
+	var image = "img/places/australia.jpg"; //mJson[0].imgPath;
+	document.getElementById("photo").src = image;
+	
 	//var expand = document.getElementById('expand');
-	$('.moreIndicator.rot90').click( function() {
+	$('.moreIndicator').click( function() {
 		$('.details').toggle();
 		alert("working");
+	});
+	
+	$('.nextPhoto').click(function() {
+		var currentSlide = $()
+	});
+	
+	$('.prevPhoto').click(function() {
+		var currentSlide = 
 	});
 	
 	// This initially hides the photos' metadata information
@@ -127,4 +138,4 @@ function GalleryImage(location, description, date, img) {
 	this.date = "";
 	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
 	this.img = "";
-}*/
+}
