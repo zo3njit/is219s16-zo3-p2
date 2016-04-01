@@ -96,6 +96,13 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 	}
 }
 
+//main function
+var main = function() {
+	$('.details').click(function() {
+		$('.details').hide();
+	});
+}
+
 $(document).ready( function() {
 	
 	// This initially hides the photos' metadata information
