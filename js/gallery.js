@@ -54,6 +54,9 @@ var mImages = [];
 
 // XMLHttpRequest variable
 var mRequest = new XMLHttpRequest();
+
+mRequest.open("GET",mURL, true); 
+
 mRequest.onreadystatechange = function() { 
 	// Do something interesting if file is opened successfully 
 	if (mRequest.readyState == 4 && mRequest.status == 200) {
@@ -69,7 +72,6 @@ mRequest.onreadystatechange = function() {
 	} 
 };
 
-mRequest.open("GET",mURL, true); 
 mRequest.send();
 
 //Iterate through JSON object and create GalleryImage objects
@@ -99,7 +101,7 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 $(document).ready( function() {
 	
 	//var expand = document.getElementById('expand');
-	$('.img.moreIndicator.rot90').click( function() {
+	$('.moreIndicator.rot90').click( function() {
 		$('.details').toggle();
 		alert("working");
 	});
