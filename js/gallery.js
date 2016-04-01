@@ -99,7 +99,7 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 //main function
 var main = function() {
 	$('.moreIndicator').click(function() {
-		$('.photoBooth').removeClass('details');
+		$('.details').toggle();
 	});
 }
 
