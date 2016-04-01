@@ -88,7 +88,7 @@ function myFunction(arr) {
     var out = "";
     var i;
     for(i = 0; i < arr.length; i++) {
-        out += '<a href="' + arr[i].url + '">' + 
+        out += '<a href="' + arr[i].mUrl + '">' + 
         arr[i].imgPath + '</a><br>';
     }
     document.getElementById("id01").innerHTML = out;
