@@ -98,9 +98,10 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 
 $(document).ready( function() {
 	
-	$('.moreIndicator').click( function() {
+	$('.moreIndicator rot90').click( function() {
 		$('.details').toggle();
 	});
+	
 	// This initially hides the photos' metadata information
 	$('.details').eq(0).show();
 	
