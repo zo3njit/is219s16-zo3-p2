@@ -110,17 +110,17 @@ $(document).ready( function() {
 	});
 	
 	$('.nextPhoto').click(function() {
-		var currentSlide = $()
+		var currentSlide = ;
 	});
 	
 	$('.prevPhoto').click(function() {
-		var currentSlide = 
+		var currentSlide = ;
 	});
 	
 	// This initially hides the photos' metadata information
 	//$('.details').eq(0).show();
 	
-});
+})
 
 window.addEventListener('load', function() {
 	
