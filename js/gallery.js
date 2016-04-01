@@ -74,7 +74,7 @@ mRequest.onreadystatechange = function() {
 			mJson = JSON.parse(mRequest.responseText);
 			// Let’s print out the JSON; It will likely show as “obj” 
 			console.log(mJson); 
-			myFunction(mImages);
+			myFunction(mJson);
 		} catch(err) { 
 			console.log(err.message) 
 		} 
