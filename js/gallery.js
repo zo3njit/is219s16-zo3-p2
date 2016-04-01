@@ -98,12 +98,13 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 
 $(document).ready( function() {
 	
-	$('.moreIndicator rot90').click( function() {
+	$('img.moreIndicator').click( function() {
 		$('.details').toggle();
+		alert("working");
 	});
 	
 	// This initially hides the photos' metadata information
-	$('.details').eq(0).show();
+	//$('.details').eq(0).show();
 	
 });
 
