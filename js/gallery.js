@@ -98,11 +98,8 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 
 //main function
 var main = function() {
-	$('.details').click(function() {
-		$('.details').removeClass('location');
-		$('.details').removeClass('description');
-		$('.details').removeClass('date');
-		
+	$('.moreIndicator').click(function() {
+		$('.photoBooth').removeClass('details');
 	});
 }
 
