@@ -46,7 +46,7 @@ var mCurrentIndex = 0;
 var mRequest = new XMLHttpRequest();
 
 // Array holding GalleryImage objects (see below).
-var mImages = [];
+var mImages = ["img/places/australia.jpg","img/places/austria.jpg","img/places/france.jpg","img/places/greece.jpg","img/places/hungary.jpg","img/places/india.jpg","img/places/italy.jpg","img/places/japan.jpg","img/places/korea.jpg","img/places/norway.jpg","img/places/switzerland.jpg","img/places/thailand.jpg","img/places/turkey.jpg",];
 
 // Holds the retrived JSON information
 var mJson;
