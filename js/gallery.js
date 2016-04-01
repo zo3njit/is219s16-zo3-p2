@@ -98,6 +98,9 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 
 $(document).ready( function() {
 	
+	$('.moreIndicator').click( function() {
+		$('.details').toggle();
+	});
 	// This initially hides the photos' metadata information
 	$('.details').eq(0).show();
 	
@@ -120,12 +123,3 @@ function GalleryImage(location, description, date, img) {
 	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
 	this.img = "";
 }
-
-//main function
-var main = function() {
-	$('.moreIndicator').click(function() {
-		$('.details').toggle();
-	});
-}
-
-$(document).ready(main);
