@@ -61,8 +61,8 @@ mRequest.onreadystatechange = function() {
 			// Let’s try and see if we can parse JSON 
 			mJson = JSON.parse(mRequest.responseText);
 			// Let’s print out the JSON; It will likely show as “obj” 
-			//console.log(mJson); 
-			myFunction(mJson);
+			console.log(mJson); 
+			//myFunction(mJson);
 		} catch(err) { 
 			console.log(err.message) 
 		} 
@@ -99,7 +99,7 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 $(document).ready( function() {
 	
 	//var expand = document.getElementById('expand');
-	$('.expand').click( function() {
+	$('.img.moreIndicator.rot90').click( function() {
 		$('.details').toggle();
 		alert("working");
 	});
