@@ -31,14 +31,6 @@ function animate() {
 }
 
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
-function swapPhoto() {
-	//Add code here to access the #slideShow element.
-	//Access the img element and replace its source
-	//with a new image from your images array which is loaded 
-	//from the JSON string
-	console.log('swap photo');
-}
-
 // Counter for the mImages array
 var mCurrentIndex = 0;
 
@@ -96,6 +88,14 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 		galleryImage.img = e.target;
 		mImages.push(galleryImage);
 	}
+}
+
+function swapPhoto() {
+	//Add code here to access the #slideShow element.
+	//Access the img element and replace its source
+	//with a new image from your images array which is loaded 
+	//from the JSON string
+	console.log('swap photo');
 }
 
 $(document).ready( function() {
